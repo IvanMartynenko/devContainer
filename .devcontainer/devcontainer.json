@@ -1,0 +1,48 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.245.2/containers/ruby-rails-postgres
+// Update the VARIANT arg in docker-compose.yml to pick a Ruby version
+{
+	"name": "Ruby on Rails & Postgres",
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "app",
+	"workspaceFolder": "/workspace",
+	// Configure tool-specific properties.
+	"customizations": {
+		// Configure properties specific to VS Code.
+		"vscode": {
+			// Add the IDs of extensions you want installed when the container is created.
+			"extensions": [
+				"kaiwood.endwise",
+				"rebornix.Ruby",
+				"ms-azuretools.vscode-docker",
+				"formulahendry.auto-rename-tag",
+				"misogi.ruby-rubocop",
+				"castwide.solargraph",
+				"aliariff.vscode-erb-beautify",
+				"hridoy.rails-snippets",
+				"sianglim.slim",
+				"rayhanw.erb-helpers",
+				"aki77.rails-db-schema",
+				"aki77.rails-routes",
+				"shanehofstetter.rails-i18n",
+				"jemmyw.rails-fast-nav",
+				"aki77.rails-partial",
+				"IBM.output-colorizer"
+			]
+		}
+	},
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// This can be used to network with other containers or the host.
+	"forwardPorts": [
+		3000,
+		5432
+	],
+	// Use 'postCreateCommand' to run commands after the container is created.
+	// "postCreateCommand": "bundle install && rake db:setup",
+	// "postCreateCommand": "chown -R vscode:vscode /workspace/storage && chown -R vscode:vscode /workspace/logs && chown -R vscode:vscode /workspace/node_modules && chown -R vscode:vscode /usr/local/bundle && chown -R vscode:vscode /workspace/tmp/cache && chown -R vscode:vscode /workspace/public/packs && chown -R vscode:vscode /usr/local/hist",
+	// "postCreateCommand": "sudo chown -R vscode:vscode /workspace/storage && sudo chown -R vscode:vscode /workspace/log && sudo chown -R vscode:vscode /workspace/node_modules && sudo chown -R vscode:vscode /usr/local/bundle && sudo chown -R vscode:vscode /workspace/tmp/cache && sudo chown -R vscode:vscode /workspace/public/packs && sudo chown -R vscode:vscode /usr/local/hist  && sudo chown -R vscode:vscode /workspace/tmp/pids/",
+	// Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+	"remoteUser": "root",
+	"privileged": true,
+	"updateRemoteUserUID": false
+}

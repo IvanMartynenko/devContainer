@@ -1,0 +1,18 @@
+{
+  "editor.tabSize": 2,
+  "editor.useTabStops": false,
+  "[erb]": {
+    "editor.defaultFormatter": "aliariff.vscode-erb-beautify",
+  },
+  "[html]": {
+    "editor.defaultFormatter": "aliariff.vscode-erb-beautify",
+  },
+  "files.associations": {
+    "*.erb": "erb"
+  },
+  "emmet.includeLanguages": {
+    "erb": "html"
+  },
+  "emmet.showAbbreviationSuggestions": true,
+  "emmet.showSuggestionsAsSnippets": true
+}
